@@ -1,0 +1,59 @@
+/* Ingresar CSS */
+body {
+    position: absolute;
+    font-family: 'Rubik', sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+    align-items: center;
+    top: 30%;
+}
+
+h1 {
+    color: #333;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: 50%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#incorrect {
+    margin-top: 20px;
+    color: #ff0000;
+    visibility: hidden;
+}
+
+#incorrect ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#incorrect li {
+    margin-bottom: 5px;
+}

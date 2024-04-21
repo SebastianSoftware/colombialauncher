@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ingresar</title>
+        <link rel="stylesheet" href="assets/index2.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <h1>Ingresar</h1>
+        <form id="setName">
+            <label for="name">¿Cómo te gustaría que te llamaras en Minecraft?</label><br>
+            <input type="text" id="name" name="name" placeholder="Temis1996" size="2">
+            <button type="button" onclick="saveName()">Establecer nombre</button>
+        </form>
+        <div id="incorrect">
+            <span>El nombre debe tener los siguientes requisitos:</span>
+            <ul>
+                <li>Debe tener menos de 16 caracteres</li>
+                <li>Debe tener más de 3 caracteres</li>
+                <li>Debe de contener solo letras del alfabeto inglés</li>
+                <li>Puede contener números entre el 0 y el 9</li>
+                <li>No puede contener carácteres especiales, a excepción de "_"</li>
+            </ul>
+        </div>
+    </body>
+    <script>
+        let name;
+
+function saveName() {
+    name = document.getElementById('name').value;
+    function start() {
+        document.getElementById("incorrect").style.visibility = "hidden";
+    }
+    function requirement(name) {
+        let regex = /^[a-zA-Z0-9_]+$/;
+        return regex.test(name);
+    }
+
+    if (name.length >= 4 && name.length <= 15 && requirement(name)) {
+        console.log("¡Guardado exitosamente!");
+        sendName();
+    } else {
+        document.getElementById("incorrect").style.visibility = "visible";
+    }
+}
+
+function sendName() {
+    customName = name;
+    window.api.setName(name);
+}
+    </script>
+</html>

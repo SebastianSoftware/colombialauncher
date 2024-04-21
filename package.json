@@ -1,0 +1,28 @@
+{
+  "name": "colombialauncher",
+  "version": "0.5.0",
+  "description": "Colombia Server Minecraft Launcher",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "keywords": [
+    "minecraft",
+    "sebastiansoftwarestudios",
+    "launcher",
+    "minecraft-launcher"
+  ],
+  "author": "Sebastian Software Studios",
+  "license": "ISC",
+  "dependencies": {
+    "decompress": "^4.2.1",
+    "discord-rich-presence": "^0.0.8",
+    "download": "^8.0.0",
+    "minecraft-launcher-core": "^3.16.18",
+    "msmc": "^4.1.0"
+  },
+  "devDependencies": {
+    "electron": "^24.3.1"
+  }
+}
